@@ -1,7 +1,11 @@
 // recur with cachem
 function fibo(num, mem) {
 	// empty hash or orig mem 
-	mem = mem || {};
+	if(mem) {
+
+	} else {
+		mem = {};
+	}
 
 	// we hit, got it, then return
 	if(mem[num]) return mem[num];
@@ -16,5 +20,5 @@ function fibo(num, mem) {
 }
 
 
-let out = fibo(100, {});
+let out = fibo(100, null);
 console.log(out);
